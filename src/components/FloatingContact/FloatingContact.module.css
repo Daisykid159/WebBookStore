@@ -1,0 +1,60 @@
+.floatingWrapper {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #1877f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.icon:nth-child(2) {
+    background: #0088cc;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.phoneWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.phoneButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #d32f2f;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.phoneButton:hover {
+    background: #b71c1c;
+}
+
+.phoneText {
+    white-space: nowrap;
+}

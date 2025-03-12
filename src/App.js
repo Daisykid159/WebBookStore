@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify"
- 
+
 import DefaultLayout from "./layouts/DefaultLayout"
 import AdminLayout from "./layouts/AdminLayout"
 import AccountLayout from "./layouts/AccountLayout";
@@ -53,6 +53,9 @@ import { login, logout } from "./redux/actions/auth";
 import { setCart } from "./redux/actions/cart";
 
 import { roleEnum } from  "./layouts/components/SideBar/routes"
+import Contact from "./pages/Contact/Contact";
+import FloatingContact from "./components/FloatingContact/FloatingContact";
+import FeedbackList from "./pages/Admin/Feedback/FeedbackList";
 
 function App() {
 
@@ -117,7 +120,7 @@ function App() {
           <Route path="/thanh-toan" element={<Checkout />} />
           <Route path="/san-pham/the-loai/:genre" element={<GenreDetail />} />
           <Route path="/tim-kiem" element={<Search />} />
-
+          <Route path="/lien-he" element={<Contact />} />
           <Route path="/thanhtoan/momo/callback" element={<MoMoCallback />}></Route>
 
         </Route>
@@ -152,6 +155,8 @@ function App() {
 
               <Route path="customer" element={<CustomerList />} />
 
+              <Route path="contact" element={<FeedbackList />} />
+
             </Route>
           </Route>
         )}
@@ -176,8 +181,8 @@ function App() {
         )}
 
         <Route path="*" element={<NotFound />} />
-
-      </Routes> 
+      </Routes>
+      <FloatingContact />
     </div>
   );
 }

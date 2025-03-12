@@ -59,7 +59,7 @@ function AnalyticsPage() {
             ...pre, 
             book: resBook?.count || 0,
             order: resOrder?.count || 0,
-            revenue: resRevenue?.data[0]?.revenue || 0
+            revenue: resRevenue?.data?.length > 0 ? resRevenue.data[0].revenue : 0,
           }
         })
       } catch (error) {
